@@ -1,5 +1,5 @@
 export default function RepoItem(props) {
-  const { name, description, language, forksCount } = props;
+  const { name, description, language, forksCount, dateCreated } = props;
 
   return (
     <div>
@@ -8,6 +8,7 @@ export default function RepoItem(props) {
         {description && <li>{description}</li>}
         {language && <li>{language}</li>}
         {forksCount && <li>Forks count: {forksCount}</li>}
+        {dateCreated && <li>Date: {dateCreated}</li>}
       </ul>
       <hr />
     </div>
