@@ -44,6 +44,7 @@
 .repo-item {
   border: 0.2rem dotted black;
   margin: 1rem;
+  padding: 0.5rem;
 }
 
 .repo-item:hover {
@@ -52,7 +53,14 @@
   transform: translateX(-0.1rem) translateY(-0.1rem);
 }
 
-.overLay {
-  z-index: 2;
-  border: 0.2rem solid black;
+.extended-info {
+  background-color: #eaebee;
+  border: 0.1rem solid #878a91;
+  margin: 1rem;
+  padding: 1rem;
+  word-wrap: break-word;
+}
+
+hr {
+  width: 30%;
 }

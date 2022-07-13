@@ -37,7 +37,11 @@ export default function RepoItem(props) {
           {dateCreated && <li>Date: {dateCreated}</li>}
         </ul>
         <p>
-          <em>*click to toggle more info*</em>
+          {state.featuredRepo ? (
+            <em>*click to see less*</em>
+          ) : (
+            <em>*click to see more*</em>
+          )}
         </p>
       </div>
       {state.featuredRepo === name && (
