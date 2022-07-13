@@ -1,7 +1,7 @@
 import RepoItem from './RepoItem.jsx';
 
 export default function Repo(props) {
-  const { state } = props;
+  const { state, setState } = props;
 
   const datedList = state.filteredRepos.map((obj) => {
     return { ...obj, created_at: new Date(obj.created_at) };
@@ -16,10 +16,13 @@ export default function Repo(props) {
     return (
       <RepoItem
         name={repo.name}
+        id={repo.id}
         description={repo.description}
         language={repo.language}
         forksCount={repo.forks_count}
         dateCreated={timeString}
+        state={state}
+        setState={setState}
         key={index}
       />
     );

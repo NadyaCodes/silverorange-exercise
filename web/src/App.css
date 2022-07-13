@@ -1,3 +1,7 @@
+* {
+  margin: 0.5rem;
+}
+
 .App {
   text-align: center;
 }
@@ -35,4 +39,20 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.repo-item {
+  border: 0.2rem dotted black;
+  margin: 1rem;
+}
+
+.repo-item:hover {
+  border: 0.2rem solid black;
+  box-shadow: 0.4rem 0.4rem #878a91;
+  transform: translateX(-0.1rem) translateY(-0.1rem);
+}
+
+.overLay {
+  z-index: 2;
+  border: 0.2rem solid black;
 }

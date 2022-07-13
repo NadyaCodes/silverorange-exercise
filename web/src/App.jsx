@@ -11,6 +11,7 @@ export function App() {
     repoList: [],
     languageList: [],
     filteredRepos: [],
+    featuredRepo: '',
   });
 
   useEffect(() => {
