@@ -10,12 +10,17 @@ export function App() {
     currentLanguage: '',
     repoList: [],
     languageList: [],
+    filteredRepos: [],
   });
 
   useEffect(() => {
     const fetchRepos = async () => {
       axios.get('http://localhost:4000/repos').then((data) => {
-        setState((prev) => ({ ...prev, repoList: data.data }));
+        setState((prev) => ({
+          ...prev,
+          repoList: data.data,
+          filteredRepos: data.data,
+        }));
       });
     };
     fetchRepos();
@@ -24,8 +29,8 @@ export function App() {
   return (
     <main>
       <h1>GitHub Repo Fetching</h1>
-      <Filter state={state} />
-      <Repo state={state} />
+      <Filter state={state} setState={setState} />
+      <Repo state={state} setState={setState} />
     </main>
   );
 }

@@ -3,7 +3,7 @@ import RepoItem from './RepoItem.jsx';
 export default function Repo(props) {
   const { state } = props;
 
-  const datedList = state.repoList.map((obj) => {
+  const datedList = state.filteredRepos.map((obj) => {
     return { ...obj, created_at: new Date(obj.created_at) };
   });
 
