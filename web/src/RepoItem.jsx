@@ -38,9 +38,9 @@ export default function RepoItem(props) {
         </ul>
         <p>
           {state.featuredRepo ? (
-            <em>*click to see less*</em>
+            <em>*click to see less* &#x2191;</em>
           ) : (
-            <em>*click to see more*</em>
+            <em>*click to see more* &#x2193;</em>
           )}
         </p>
       </div>
